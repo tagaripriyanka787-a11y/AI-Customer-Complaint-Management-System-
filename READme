@@ -1,0 +1,91 @@
+# AI Customer Complaint Management System
+
+## Project Description
+The AI Customer Complaint Management System is a backend application developed using FastAPI. It allows customers to submit complaints through a REST API. The system accepts complaint details, processes the request, and returns a successful response. It is designed as a foundation for an AI-powered complaint management system.
+
+## Features
+- Submit customer complaints
+- FastAPI REST API
+- Interactive Swagger API documentation
+- Complaint categorization (Refund, Delivery, Payment, General)
+- JSON request and response handling
+
+## Technologies Used
+- Python
+- FastAPI
+- Uvicorn
+- Pydantic
+- SQLAlchemy
+- Transformers
+- PyTorch
+
+## Project Structure
+
+```
+backend/
+│── main.py
+│── README.md
+│── requirements.txt
+│── routers/
+│     └── complaints.py
+│── schemas/
+│     └── complaint_schema.py
+│── ai/
+│     └── classifier.py
+```
+
+## Installation
+
+Install the required packages:
+
+```bash
+pip install fastapi uvicorn sqlalchemy pydantic transformers torch
+```
+
+## Run the Project
+
+```bash
+uvicorn main:app --reload
+```
+
+## API Documentation
+
+After running the server, open:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+## Sample Request
+
+```json
+{
+  "customer_name": "Priyanka",
+  "complaint": "My refund has not been processed."
+}
+```
+
+## Sample Response
+
+```json
+{
+  "customer": "Priyanka",
+  "complaint": "My refund has not been processed.",
+  "category": "Refund",
+  "status": "Submitted Successfully"
+}
+```
+
+## Future Enhancements
+
+- Database integration
+- User authentication
+- AI-powered complaint prioritization
+- Email notifications
+- React frontend dashboard
+
+## Author
+
+**Priyanka Tagari**  
+Computer Science Engineering Student  
+Jain College of Engineering
